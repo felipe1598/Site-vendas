@@ -1,0 +1,12 @@
+document.addEventListener("DOMContentLoaded", function() {
+    const copiarBtn = document.getElementById("copiarBtn");
+    const pixKey = document.getElementById("pixKey");
+
+    if(copiarBtn){
+        copiarBtn.addEventListener("click", function(){
+            navigator.clipboard.writeText(pixKey.textContent)
+                .then(() => alert("Chave PIX copiada!"))
+                .catch(() => alert("Não foi possível copiar."));
+        });
+    }
+});
